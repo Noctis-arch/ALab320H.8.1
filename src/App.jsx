@@ -15,18 +15,22 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h1>Star Wars Starships</h1>
+    <>
+      <header>
+        <h1>STAR WARS STARSHIPS</h1>
+      </header>
 
-      <div className="card-container">
-        {starships.map((starship) => (
-          <StarShipCard
-            key={starship.url}
-            starship={starship}
-          />
-        ))}
-      </div>
-    </div>
+      <main>
+        <div className="card-container">
+          {starships.map((starship) => (
+            <StarShipCard
+              key={starship.url}
+              starship={starship}
+            />
+          ))}
+        </div>
+      </main>
+    </>
   );
 }
 
